@@ -4,6 +4,9 @@
   "application": {
     "port": 8877
   },
+  "scripts":{
+    "postinstall": "grunt jasmine && grunt"
+    },
   "description": "testapp",
   "author": "jrm",
   "private": true,
@@ -19,6 +22,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-nodemon": "^0.3.0",
     "grunt-template-jasmine-istanbul": "^0.3.0",
+    "open": "0.0.5",
     "restify": "^2.8.4"
   }
 }

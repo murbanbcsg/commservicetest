@@ -1,5 +1,6 @@
 var restify = require('restify'),
 	pjson = require('./package.json'),
+	open = require('open'),
 	server = restify.createServer({
 		name: 'SimpleServerSuite',
 		version: pjson.version
@@ -61,4 +62,5 @@ server.get(/.*/, restify.serveStatic({
 
 server.listen((pjson.application.port + 1), function() {
 	console.log('%s, listening at %s, app version is %s', server.name, server.url, pjson.version);
+	open('http://localhost:'+(pjson.application.port + 1));
 });
